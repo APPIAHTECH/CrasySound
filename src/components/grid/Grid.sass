@@ -1,0 +1,39 @@
+$gridRowColor : #34444E
+$boder-color : #2C3C46
+$last-color : #22323C
+$noteClickColor : #93A9B7
+
+$width : 25%
+$height : 20px
+
+div.grid , .pattern
+  width: 100%
+  height: 100%
+  background: white
+  display: flex
+  flex-flow: column wrap
+  overflow: hidden
+  z-index: 100
+
+div.pattern
+  background: white
+  flex-flow: row nowrap
+  justify-content: space-between
+  overflow: hidden
+
+
+div.row
+  background: $gridRowColor
+  width: $width
+  height: $height
+  border-right: $boder-color solid 1px
+  border-bottom: $boder-color solid 1px
+
+div.last
+  border-right: $last-color solid 2px !important
+
+div.flipped
+  transform: rotateX(180deg)
+
+div.noteClickColor
+  background: $noteClickColor !important

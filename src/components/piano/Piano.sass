@@ -1,0 +1,100 @@
+//This the piano style component
+
+//Variable
+
+$color-black-keys : #3A3B3D
+$color-white-keys : #ecf0f1
+
+$click-color : #e67e22
+$click-color-black : #d35400
+
+$hover-color : #bdc3c7
+
+$border-right-color : #95a5a6
+$piano-roll-color : #2E3E48
+
+$color-do : #B2B6BD
+
+$key-size-width : 150px
+$key-size-height : 15px
+$piano-roll-width-size : 100%
+$piano-roll-height-size : 600px
+
+$key-black-size-width : $key-size-width / 2
+$key-black-size-height: $key-size-height
+
+$key-text-size : 8pt
+
+div.piano-roll
+  width: $piano-roll-width-size
+  height: auto
+  overflow: auto
+  display: flex
+  flex-flow: row nowrap
+  position: absolute
+  scrollbar-x-position: top
+
+
+div.key-board
+  display: block
+  box-sizing: content-box
+  height: 100%
+  //border-right: solid 1px $border-right-color
+
+
+div.key
+  width: $key-size-width
+  height: $key-size-height
+  text-align: end
+  padding: 10px
+  border-top: solid 1px #C0C4CA
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  cursor: pointer
+
+div.octave
+  padding: 0
+  margin: 0
+  box-sizing: content-box
+
+div.white
+  background: $color-white-keys
+
+div.black
+  background: $color-black-keys
+
+div.black-key
+  width: $key-black-size-width
+  height: $key-black-size-height
+  padding: 5px
+  border: none
+  position: absolute
+
+
+div.black-key-one , div.black-key-two , div.black-key-three , div.black-key-four , div.black-key-five
+  margin-top: -12px
+  left: 0px
+
+
+
+.key p
+  font-weight: normal
+  font-size: $key-text-size
+  cursor: pointer
+
+.do
+  background: $color-do !important
+
+
+div.key:active
+  background: $click-color !important
+
+div.black-key:active
+  background: $click-color-black !important
+
+.active
+  background: $click-color !important
+
+.active-black
+  background: $click-color-black !important
